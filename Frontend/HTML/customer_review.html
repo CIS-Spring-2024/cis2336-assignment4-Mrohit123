@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>customer review</title>
+        <link rel="stylesheet" href="../CSS/style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="row">
+            <div class="column" align="left"><img src="../Image/uh.jpg" alt="UH" ></div>
+            <div class="column" align="middle"><h1>Rohit's Cougar Cafe UHSL</h1></div>
+            <div class="column" align="right"><img src="../Image/spoons_red.jpg" alt="UH" style="width: 50px; height:50px"></div></header>
+            </div>
+        </header>
+        <div class="topnav">
+            <a href="../HTML/homepage.html"><b>Home</b></a>
+            <a href="../HTML/order.html"><b>Order</b></a>
+            <a href="../HTML/contact.html"><b>Contact</b></a>
+            <a class="active" href="../HTML/customer_review.html"><b>Customer Review</b></a>
+            <a href="../HTML/about.html"><b>About</b></a>
+        </div>
+
+        <style>
+        
+            button {
+                background-color: #50a54e;
+                width:100%;
+                height:50px;
+                color:white;
+            
+            }
+            input{
+                width:100%;
+                height:40px;
+            }
+            form { 
+                margin: 0 auto;
+                width: 50%;
+            }
+
+            .row1 {
+            display: flex;
+            margin-left:-5px;
+            margin-right:-158px;
+            }
+
+            .column1 {
+            flex: 80%;
+            padding: 5px;
+            }
+
+        </style>
+        <section id="menu">
+            <h2>Customer reviews :-</h2>
+        </section>
+        <br>
+        <div class="row" id="reviews" style="width: 100%;">
+            <div>
+                <div style="color: rgb(0, 21, 255);">
+                    <b>"I ordered Chicken Sandwich, it was tasty.
+                    I would recommend to others.
+                        - John"</b>
+                </div>
+                <br>
+                <div style="color: rgb(255, 157, 0);">
+                    "I tried Chicken Salad, it was delicious. <br>
+                                                    I would try again.
+                                                                    - Samuel"
+                </div>
+                <br>
+                <div style="color: rgb(255, 0, 0);">
+                    "Recently I visited Rohit's Cougar Cafe UHSL, the staffs were friendly. <br>
+                                                                    - Samantha"
+                </div>
+            </div>
+            <div class="column" style="width: 75%;">
+                <form>
+                    <div id="contact">
+                        <div class="row1">
+                            <h2><b>Write A Review, Help Us to serve you better</b></h2>
+                            <img src="../Image/smiley.jpg" alt="UH" style="width: 40px; height:40px">
+                        </div>
+                        Your Name:*<br><input type="text" id="fname"> <br> <br>
+                        Your Email Address:*<br><input type="text" id="femail"> <br> <br>
+                        Review Comments:<br><input type="text" id="comment"> <br> <br>
+                        <button id="review" type="submit">Post Review</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <script>
+            let inputs = document.getElementsByTagName('input');
+            for(let input of inputs){
+                input.addEventListener('focus', function(){
+                    this.style.backgroundColor = 'Yellow';
+                });
+                input.addEventListener('blur', function(){
+                    this.style.backgroundColor = '';
+                });
+            }
+
+
+            let nameTag = document.getElementById('fname');
+            nameTag.addEventListener('blur', function(){
+                let nameval = this.value;
+                if(nameval.length < 1){
+                    alert('Name field can not be empty')
+                }
+            });
+
+            let emailTag = document.getElementById('femail');
+            emailTag.addEventListener('blur', function(){
+                let emailval = this.value;
+                if(emailval.length < 1){
+                    alert('Email field can not be empty')
+                }
+            });
+            
+            document.querySelector('button[type = "submit"]').addEventListener('click', function(e){
+                e.preventDefault();
+                alert('submit the form for processing now');
+            });
+            
+        </script>
+        <footer>
+            <p>&copy; 2024 UH SugarLand. All rights reserved.</p>
+            <p>Contact us at <a href="mailto:cafeteria_sugarland@uh.com">cafeteria_sugarland@uh.com</a>.</p>
+        </footer>
+
+    </body>
+</html>

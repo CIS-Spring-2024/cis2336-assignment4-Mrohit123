@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Menu</title>
+      <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="row">
+      <div class="column" align="left"><img src="../Image/uh.jpg" alt="UH" ></div>
+      <div class="column" align="middle"><h1>Rohit's Cougar Cafe UHSL</h1></div>
+      <div class="column" align="right"><img src="../Image/spoons_red.jpg" alt="UH" style="width: 50px; height:50px"></div></header>
+      </div>
+    </header>
+    <div class="topnav">
+      <a href="../HTML/homepage.html"><b>Home</b></a>
+      <a class="active" href="../HTML/order.html"><b>Order</b></a>
+      <a href="../HTML/contact.html"><b>Contact</b></a>
+      <a href="../HTML/customer_review.html"><b>Customer Review</b></a>
+      <a href="../HTML/about.html"><b>About</b></a>
+    </div>
+    <style>
+      table, th, td {
+         border-collapse: collapse;
+      }
+      th {
+        background-color: #890000;
+        color: white;
+        height:60px;
+        text-align: left;
+      }
+      
+      tr {
+        background-color: wheat;
+        color: black;
+        height:60px;
+      }
+      
+      tr:nth-child(odd) {
+        background-color: white;
+        color: black;
+      }
+
+      button {
+                background-color: #50a54e;
+                width:100%;
+                height:50px;
+                color:white;
+            
+            }
+    </style>
+    <form action = "/confirm-order" method = "POST">
+    <section id="menu">
+        <h2>Order your items in Rohit's Cougar Cafe UHSL</h2>
+    </section>
+    <div id = "tables" class="row">
+      <div id = "table1" class="column">
+        <table style="width:100%" >
+          <tr>
+            <th>Food</th>
+            <th>Food Name</th>
+            <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Qty</th>
+            <th>Add to Cart</th>
+          </tr>
+          <tbody id="itemslist">
+
+          </tbody>
+          
+        </table>
+      </div>
+      <br>
+      <div id = "table2" class="column">
+        <table style="width:100%">
+          <tr>
+            <th colspan="2">Order Summary</th>
+          </tr>
+          <tr>
+            <td><b>Items selected</b></td>
+            <td><b>Price</b></td>
+          </tr>
+          <tbody id="seletectedItems">
+          </tbody>
+          <!--<tbody id="subTotalItem">
+          </tbody>-->
+          <tr>
+            <td colspan="2"><button id="checkout" type="submit">Checkout</button></td>
+          </tr>
+        </table>
+        <!--<input type="hidden" id="subTotalId" name="subTotal" value="">-->
+      </div>
+    </div>
+    </form>
+    <br>
+    <footer>
+        <p>&copy; 2024 UH SugarLand. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:cafeteria_sugarland@uh.com">cafeteria_sugarland@uh.com</a>.</p>
+    </footer>
+    
+    <script src="../JS/menu.js"></script>
+    <script src="../JS/order-items.js"></script>
+  </body>
+</html>
